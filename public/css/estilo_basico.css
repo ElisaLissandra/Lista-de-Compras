@@ -1,0 +1,19 @@
+body {
+
+}
+
+#bar {
+    background:#40798c;
+    padding: 30px 50px 30px 50px;
+    color: #ffffff;
+}
+
+#form {
+    background: #f1ebe5;
+    padding: 30px 40px 30px 40px;
+}
+
+.button{
+    float: right;
+    margin-top: -45px;
+}

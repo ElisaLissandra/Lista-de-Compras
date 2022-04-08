@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string('produto', 50);
             $table->string('marca', 50);
-            $table->string('valor', 4,2);
+            $table->float('valor', 4,2);
             $table->timestamps();
         });
     }

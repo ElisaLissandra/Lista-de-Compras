@@ -4,16 +4,16 @@
 
 @section('content')
 
-    <div class="container mt-5">
-      <div class="row">
-        <div class="col-sm-10">
-          <h1>Lista Mercado</h1>
+    <div class="container mt-5" id="bar">
+        <div class="col-md">
+            <h1>Lista Mercado</h1>
         </div>
-        <div class="col-sm-2">
-          <a href="" class="btn btn-success">Novo Produto</a>
+        <div class="col-md button">
+            <a href="{{ route('itens-create')}}" class="btn btn-success">Novo Produto</a>
         </div>
-      </div>
-        <table class="table mt-3">
+    </div>
+    <div class="container" id="form">
+        <table class="table">
             <thead>
                 <tr>
                     <th scope="col">#</th>
