@@ -14,9 +14,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::prefix('itens')->group(function() {
     Route::get('/', [itemController::class, 'index'])->name('itens-index');
     Route::get('/create', [itemController::class, 'create'])->name('itens-create');
     Route::post('/', [itemController::class, 'store'])->name('itens-store');
+    Route::post('/calcular', [itemController::class, 'calcular'])->name('itens-calcular');
 
-});

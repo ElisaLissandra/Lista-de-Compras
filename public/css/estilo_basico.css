@@ -1,9 +1,5 @@
-body {
-
-}
-
 #bar {
-    background:#40798c;
+    background:#61a5c2;
     padding: 30px 50px 30px 50px;
     color: #ffffff;
 }
@@ -16,4 +12,10 @@ body {
 .button{
     float: right;
     margin-top: -45px;
+}
+
+.total {
+    text-align: center;
+    font-weight: bold;
+    background: #b7b7a4;
 }

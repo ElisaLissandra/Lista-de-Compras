@@ -12,6 +12,8 @@ class Item extends Model
     protected $fillable = [
         'produto',
         'marca',
-        'valor'
+        'unidade',
+        'valor',
+        'total'
     ];
 }

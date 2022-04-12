@@ -11,8 +11,13 @@ class ItemController extends Controller
     {
 
      $itens = Item::all();
+     $total = 0;
 
-     return view('itens.index', ['itens' => $itens]);
+     foreach($itens as $item){
+     $total += floatval($item -> valor) * floatval($item -> unidade);
+     }
+
+     return view('itens.index', ['itens' => $itens, 'total' => $total]);
     }
 
     public function create()
@@ -26,6 +31,5 @@ class ItemController extends Controller
         Item::create($request->all());
         return redirect()->route('itens-index');
     }
-
 
 }

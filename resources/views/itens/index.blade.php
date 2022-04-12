@@ -4,7 +4,7 @@
 
 @section('content')
 
-    <div class="container mt-5" id="bar">
+    <div class="container mt-3" id="bar">
         <div class="col-md">
             <h1>Lista Mercado</h1>
         </div>
@@ -19,7 +19,9 @@
                     <th scope="col">#</th>
                     <th scope="col">Produto</th>
                     <th scope="col">Marca</th>
+                    <th scope="col">Unidade</th>
                     <th scope="col">Valor</th>
+                    <th scope="col">Total</th>
                     <th scope="col">...</th>
                 </tr>
             </thead>
@@ -29,7 +31,9 @@
                         <th>{{ $item->id }}</th>
                         <th>{{ $item->produto }}</th>
                         <th>{{ $item->marca }}</th>
+                        <th>{{ $item->unidade }}</th>
                         <th>{{ $item->valor }}</th>
+                        <th>{{floatval($item->unidade) * $item->valor}}</th>
                         <th class="d-flex">
                             <a href="" class="btn btn-primary me-3">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil" viewBox="0 0 16 16">
@@ -49,5 +53,8 @@
                 @endforeach
             </tbody>
         </table>
+        <div class="total">
+           Total do valor do item: R$ {{ $total }}
+        </div>
     </div>
 @endsection
