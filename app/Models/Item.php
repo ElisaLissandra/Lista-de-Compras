@@ -14,6 +14,5 @@ class Item extends Model
         'marca',
         'unidade',
         'valor',
-        'total'
     ];
 }

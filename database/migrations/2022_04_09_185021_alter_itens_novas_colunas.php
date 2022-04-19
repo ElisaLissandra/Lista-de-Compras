@@ -15,7 +15,6 @@ return new class extends Migration
     {
         Schema::table('itens', function (Blueprint $table) {
             $table->string('unidade', 6)->after('marca');
-            $table->float('total', 6, 2)->after('valor');
         });
     }
 

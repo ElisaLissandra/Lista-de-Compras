@@ -32,4 +32,29 @@ class ItemController extends Controller
         return redirect()->route('itens-index');
     }
 
+    public function edit($id)
+    {
+        $itens = Item::where('id', $id)->first();
+        if(!empty($itens))
+        {
+            return view('itens.edit', ['itens'=>$itens]);
+        }else {
+            return redirect()->route('itens-index');
+        }
+
+    }
+
+    public function update(Request $request, $id)
+    {
+       $alterar_item = [
+            'produto'=> $request->produto,
+            'marca'=> $request->marca,
+            'unidade'=> $request->unidade,
+            'valor'=> $request->valor
+        ];
+
+        Item::where('id', $id)->update($alterar_item);
+        return redirect()->route('itens-index');
+
+    }
 }

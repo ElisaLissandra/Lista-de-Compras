@@ -16,6 +16,7 @@ use Illuminate\Support\Facades\Route;
 
     Route::get('/', [itemController::class, 'index'])->name('itens-index');
     Route::get('/create', [itemController::class, 'create'])->name('itens-create');
-    Route::post('/', [itemController::class, 'store'])->name('itens-store');
-    Route::post('/calcular', [itemController::class, 'calcular'])->name('itens-calcular');
+    Route::post('/itens', [itemController::class, 'store'])->name('itens-store');
+    Route::get('/itens/{id}/edit', [ItemController::class, 'edit'])->where('id', '[0-9]+')->name('itens-edit');
+    Route::put('/itens/{id}', [ItemController::class, 'update'])->where('id', '[0-9]+')->name('itens-update');
 
