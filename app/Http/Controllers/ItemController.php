@@ -57,4 +57,10 @@ class ItemController extends Controller
         return redirect()->route('itens-index');
 
     }
+
+    public function destroy($id)
+    {
+        item::where('id', $id)->delete();
+        return redirect()->route('itens-index');
+    }
 }
